@@ -26,10 +26,10 @@ def train_nlu():
   training_data = load_data('data/franken_data.json')
   trainer = Trainer(config.load('nlu_model_config.yml'))
   trainer.train(training_data)
-  model_directory = trainer.persist('models/nlu', fixed_model_name='restarant_finder')
+  model_directory = trainer.persist('models/nlu', fixed_model_name='restaurant_finder')
   return model_directory
 
-def train_dialogue(domain_file='restarant_domain.yml',
+def train_dialogue(domain_file='restaurant_domain.yml',
                     model_path="models/dialogue",
                     training_data_file='data/babi_stories.md'):
   agent = Agent(domain_file, policies=[MemoizationPolicy(max_history=3), RestaurantPolicy()])
@@ -40,7 +40,7 @@ def train_dialogue(domain_file='restarant_domain.yml',
 
 
 def run(server_forver=True):
-  interpreter = RasaNLUInterpreter('models/nlu/default/current')
+  interpreter = RasaNLUInterpreter('models/nlu/default/restaurant_finder')
   agent = Agent.load('models/dialogue', interpreter=interpreter)
 
   if server_forver:
