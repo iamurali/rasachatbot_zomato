@@ -15,10 +15,12 @@ class ActionSearchRestaurants():
   def run(self, dispatcher, tracker, domain):
     location = tracker.get_slot('location')
     cuisine_type = tracker.get_slot('cuisine')
+    print("______________", cuisine_type, location, 'location')
     if not location:
       return []
     zomato = ZomatoIntegration(os.environ['ZOMATO_API_KEY'])
     longitude, latitude = self.__fetch_location_details(zomato, location)
+    print(longitude, latitude, 'latitude')
     restaurants = self.__fetch_restaurants(zomato, longitude, latitude, cuisine_type)
     result = ""
     for restaurant in restaurants:

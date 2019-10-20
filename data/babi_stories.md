@@ -1,6 +1,7 @@
 ## Generated Story 255706069223404498
 * greet
     - utter_greet
+    - utter_ask_howcanhelp
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "delhi"}
@@ -16,6 +17,7 @@
 ## Generated Story 1993277579540566202
 * greet
     - utter_greet
+    - utter_ask_howcanhelp
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "delhi"}
@@ -29,6 +31,7 @@
 ## Generated Story 3320800183399695936
 * greet
     - utter_greet
+    - utter_ask_howcanhelp
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "italy"}
@@ -43,6 +46,7 @@
 ## Generated Story -4639179087166749998
 * greet
     - utter_greet
+    - utter_ask_howcanhelp
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "delhi"}
@@ -54,10 +58,10 @@
     - slot{"location": "delhi"}
     - export
 
-
 ## Generated Story 4963448062290237512
 * greet
     - utter_greet
+    - utter_ask_howcanhelp
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - utter_ask_cuisine
@@ -67,3 +71,18 @@
 * affirm
     - utter_goodbye
     - export
+
+## Story_00914561
+* greet
+    - utter_greet
+    - utter_ask_howcanhelp
+* restaurant_search{"location": "Bangalore"}
+    - utter_on_it
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "indian"}
+    - utter_ask_price
+* restaurant_search{"price": "cheap"}
+    - utter_ack_dosearch
+    - action_search_restaurants
+* goodbye
+    - utter_goodbye

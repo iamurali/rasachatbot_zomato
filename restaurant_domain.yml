@@ -26,6 +26,8 @@ intents:
  - inform
  - thankyou
  - request_info
+ - restaurant_search
+ - goodbye
 
 templates:
   utter_greet:
@@ -35,6 +37,8 @@ templates:
     - "Bye-bye"
   utter_default:
     - "default message"
+  utter_ack_dosearch:
+    - "ok let me see what I can find"
   utter_ask_cuisine:
     - text: "what kind of cuisine would you like?"
       buttons:
@@ -68,6 +72,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - utter_default
+- utter_ack_dosearch
 - utter_ask_cuisine
 - utter_ask_howcanhelp
 - utter_ask_location
