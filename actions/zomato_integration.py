@@ -21,8 +21,8 @@ class ZomatoIntegration():
     if ((cuisines is not None) and (cuisines != 'None')):
       url = url + '&cuisines=' + str(cuisines)
 
-    print(url, 'fettch url;::::')
     response = (requests.get(url, headers = self.__fetchheaders()).content).decode("utf-8")
+    print(response)
     return (json.loads(response)["restaurants"])
 
   def __fetchheaders(self):

@@ -32,7 +32,7 @@ class ActionSearchRestaurants():
   def __fetch_restaurants(self, zomato, longitude, latitude, cuisine_type):
     cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
     cuisines = str(cuisines_dict.get(cuisine_type))
-    restaurants = zomato.restaurants_search(longitude, latitude, cuisines)
+    restaurants = zomato.restaurants_search(latitude,longitude,cuisines)
 
     if (len(restaurants) == 0):
       raise ValueError("No restaurants found with the input given")
