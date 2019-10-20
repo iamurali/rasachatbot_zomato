@@ -10,8 +10,12 @@
         "pattern": "hey[^\\s]*"
       },
       {
-        "name": "price",
+        "name": "inform",
         "pattern": "\d{1,3}[,\\.]?(\\d{1,2})?"
+      },
+      {
+        "name": "send_email",
+        "pattern": "^\\w+(\\w+)*\\@(\\w+)*\\.(\\w+)*(.(\\w+)*)?$"
       }
     ],
     "entity_synonyms": [
@@ -129,22 +133,22 @@
       },
       {
         "text": "i'm looking for a place to eat",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": []
       },
       {
         "text": "I want to grab lunch",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": []
       },
       {
         "text": "I am searching for a dinner spot",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": []
       },
       {
         "text": "i'm looking for a place in the north of town",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 31,
@@ -156,7 +160,7 @@
       },
       {
         "text": "show me chinese restaurants",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 8,
@@ -168,7 +172,7 @@
       },
       {
         "text": "show me chines restaurants in the north",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 8,
@@ -186,7 +190,7 @@
       },
       {
         "text": "show me a mexican place in the centre",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 31,
@@ -204,7 +208,7 @@
       },
       {
         "text": "i am looking for an indian spot called olaolaolaolaolaola",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 20,
@@ -216,12 +220,12 @@
       },
       {
         "text": "search for restaurants",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": []
       },
       {
         "text": "anywhere in the west",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 16,
@@ -233,7 +237,7 @@
       },
       {
         "text": "anywhere near 18328",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 14,
@@ -245,7 +249,7 @@
       },
       {
         "text": "I am looking for asian fusion food",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 17,
@@ -257,7 +261,7 @@
       },
       {
         "text": "I am looking a restaurant in 29432",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 29,
@@ -269,7 +273,7 @@
       },
       {
         "text": "in London",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 3,
@@ -281,7 +285,7 @@
       },
       {
         "text": "South Indian",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -293,7 +297,7 @@
       },
       {
         "text": "North Indian",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -305,7 +309,7 @@
       },
       {
         "text": "Italian",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -316,8 +320,50 @@
         ]
       },
       {
+        "text": "i am looking for an italian restaurent in delhi please send the results to my email id dfresf@ffmall.cdom",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "value": "delhi",
+            "entity": "location"
+          },
+          {
+            "start": 87,
+            "end": 105,
+            "value": "dfresf@ffmall.cdom",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "find Mexican food outlets in pune ",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 29,
+            "end": 33,
+            "value": "pune",
+            "entity": "location"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
         "text": "Chinese",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -329,7 +375,7 @@
       },
       {
         "text": "chinese",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -340,8 +386,128 @@
         ]
       },
       {
+        "text": "find American food outlets in kolkata ",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "American",
+            "entity": "cuisine"
+          },
+          {
+            "start": 30,
+            "end": 37,
+            "value": "kolkata",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "i would like to have Thai food",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "Thai",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "i wants american dish",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "serve me north indian",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 21,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "send results to my email id ertsdfgdf@asded.csd.in of mexican restaurents in Agra",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 50,
+            "value": "ertsdfgdf@asded.csd.in",
+            "entity": "email"
+          },
+          {
+            "start": 54,
+            "end": 61,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 77,
+            "end": 81,
+            "value": "Agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "send some American restaurents to oiuopiokj@sdfsd.asda.sd",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 34,
+            "end": 57,
+            "value": "oiuopiokj@sdfsd.asda.sd",
+            "entity": "email"
+          },
+          {
+            "start": 10,
+            "end": 18,
+            "value": "American",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "find pocket friendly thai restaurant in chennai",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "thai",
+            "entity": "cuisine"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "chennai",
+            "entity": "location"
+          },
+          {
+            "start": 5,
+            "end": 20,
+            "value": "399",
+            "entity": "budget"
+          }
+        ]
+      }
+      {
         "text": "Lithuania",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -353,7 +519,7 @@
       },
       {
         "text": "Oh, sorry, in Italy",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 14,
@@ -365,7 +531,7 @@
       },
       {
         "text": "in delhi",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 3,
@@ -377,7 +543,7 @@
       },
       {
         "text": "In Delhi",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 3,
@@ -389,7 +555,7 @@
       },
       {
         "text": "In Delhi.",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 3,
@@ -401,7 +567,7 @@
       },
       {
         "text": "I am looking for some restaurants in Delhi.",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 37,
@@ -413,7 +579,7 @@
       },
       {
         "text": "I am looking for some restaurants in Delhi",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 37,
@@ -425,7 +591,7 @@
       },
       {
         "text": "I am looking for some restaurants in delhi",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 37,
@@ -437,7 +603,7 @@
       },
       {
         "text": "I am looking for mexican indian fusion",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 17,
@@ -449,7 +615,7 @@
       },
       {
         "text": "can you book a table in rome in a moderate price range with british food for four people",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 24,
@@ -479,7 +645,7 @@
       },
       {
         "text": "central indian restaurant",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 0,
@@ -536,50 +702,152 @@
         "entities": []
       },
       {
-        "text": "give me restaurants in 300 to 500 range",
-        "intent": "restaurant_search",
+        "text": "pocket friendly",
+        "intent": "inform",
         "entities": [
           {
-            "start": 24,
-            "end": 27,
-            "value": "300",
-            "entity": "price_start"
-          },
-          {
-            "start": 31,
-            "end": 34,
-            "value": "500",
-            "entity": "price_end"
+            "start": 0,
+            "end": 15,
+            "value": "399",
+            "entity": "budget"
           }
         ]
       },
       {
-        "text": "price range less than 300",
-        "intent": "restaurant_search",
+        "text": "pocket-friendly",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "399",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "find pocket friendly thai restaurant in chennai",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "thai",
+            "entity": "cuisine"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "chennai",
+            "entity": "location"
+          },
+          {
+            "start": 5,
+            "end": 20,
+            "value": "399",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "costly",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "701",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "moderate",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "699",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "find a Pocket Friendly restaurant ",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 7,
+            "end": 22,
+            "value": "399",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "Pocket-Friendly restaurant",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "399",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "yes. Please send it to xyz@sth.edu",
+        "intent": "send_email",
         "entities": [
           {
             "start": 23,
-            "end": 27,
-            "value": "0",
-            "entity": "price_end"
+            "end": 34,
+            "value": "xyz@sth.edu",
+            "entity": "email"
           }
         ]
       },
       {
-        "text": "price more than 700",
-        "intent": "restaurant_search",
+        "text": "asdasd@gagad.com this is my id",
+        "intent": "send_email",
         "entities": [
           {
-            "start": 17,
-            "end": 20,
-            "value": "700",
-            "entity": "price_start"
+            "start": 0,
+            "end": 16,
+            "value": "asdasd@gagad.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "asdasfu@weritp.com my address please send it there",
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "asdasfu@weritp.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "sure my email id is snurag@fnair.dom",
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 20,
+            "end": 36,
+            "value": "snurag@fnair.dom",
+            "entity": "email"
           }
         ]
       },
       {
         "text": "please help me to find restaurants in pune",
-        "intent": "restaurant_search",
+        "intent": "inform",
         "entities": [
           {
             "start": 38,

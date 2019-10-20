@@ -11,7 +11,7 @@ from rasa_core import utils
 from rasa_core.agent import Agent
 from rasa_core.policies.memoization import MemoizationPolicy
 from actions.search_restaurant import ActionSearchRestaurants
-from actions.suggest import ActionSuggest
+from actions.send_email import ActionSendEmail, ActionRestartBot
 from policy import RestaurantPolicy
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.channels.console import ConsoleInputChannel

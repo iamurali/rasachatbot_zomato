@@ -3,26 +3,26 @@ slots:
     type: text
   location:
     type: text
-  price_start:
-    type: text
-  price_end:
+  budget:
     type: text
   info:
     type: text
   matches:
     type: unfeaturized
+  email:
+    type: text
 
 entities:
 - location
 - info
-- price_start
-- price_end
+- budget
 - cuisine
 
 intents:
  - greet
  - affirm
  - deny
+ - send_email
  - inform
  - thankyou
  - request_info
@@ -58,6 +58,16 @@ templates:
     - "how can I help you?"
   utter_ask_location:
     - "where?"
+  utter_location_not_found:
+    - "Sorry, didn't find any location"
+  utter_ask_for_email_to_send:
+    - "Should i sent you details by email ? \n"
+  utter_ask_email_address:
+    - "To what email i sent"
+  utter_email_sent:
+    - "Details send via email"
+  utter_no_email_sent:
+    - "Ok!!"
   utter_ask_price:
     - text: "in which price range?"
       buttons:
@@ -79,5 +89,12 @@ actions:
 - utter_ask_howcanhelp
 - utter_ask_location
 - utter_ask_price
+- utter_ask_for_email_to_send
+- utter_no_email_sent
+- utter_location_not_found
+- utter_ask_email_address
+- utter_email_sent
 - utter_on_it
+- bot.ActionRestartBot
 - bot.ActionSearchRestaurants
+- bot.ActionSendEmail

@@ -15,6 +15,7 @@ class ActionSearchRestaurants():
   def run(self, dispatcher, tracker, domain):
     location = tracker.get_slot('location')
     cuisine_type = tracker.get_slot('cuisine')
+    print('price reader', tracker.get_slot('budget'))
     print("______________", cuisine_type, location, 'location')
     if not location:
       return []
