@@ -1,8 +1,6 @@
 slots:
   cuisine:
     type: text
-  people:
-    type: text
   location:
     type: text
   price:
@@ -15,7 +13,6 @@ slots:
 entities:
 - location
 - info
-- people
 - price
 - cuisine
 
