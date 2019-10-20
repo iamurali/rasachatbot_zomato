@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 import os
 import pprint, json
 from actions.zomato_integration import ZomatoIntegration
+from rasa_core.events import SlotSet
 
 class ActionSearchRestaurants():
   def name(self):
@@ -12,19 +13,16 @@ class ActionSearchRestaurants():
 
 
   def run(self, dispatcher, tracker, domain):
-    # print('people', tracker.get_slot('people'))
-    # print('price', tracker.get_slot('price'))
-
     location = tracker.get_slot('location')
     cuisine_type = tracker.get_slot('cuisine')
     if not location:
       return []
     zomato = ZomatoIntegration(os.environ['ZOMATO_API_KEY'])
     longitude, latitude = self.__fetch_location_details(zomato, location)
-    restaurants = self.__fetch_restaurants(longitude, latitude, cuisine_type)
+    restaurants = self.__fetch_restaurants(zomato, longitude, latitude, cuisine_type)
     result = ""
     for restaurant in restaurants:
-      result = response + "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
+      result = result + "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
 
     dispatcher.utter_message("-----" + result)
     return [SlotSet('location', location)]
