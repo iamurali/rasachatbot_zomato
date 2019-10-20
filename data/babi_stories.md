@@ -77,11 +77,14 @@
     - utter_greet
     - utter_ask_howcanhelp
 * restaurant_search{"location": "Bangalore"}
+    - slot{"location": "Bangalore"}
     - utter_on_it
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "indian"}
+    - slot{"cuisine": "indian"}
     - utter_ask_price
 * restaurant_search{"price": "cheap"}
+    - slot{"price": "cheap"}
     - utter_ack_dosearch
     - action_search_restaurants
 * goodbye
