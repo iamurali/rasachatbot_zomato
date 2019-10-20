@@ -45,7 +45,20 @@ templates:
         - title: "thank you"
           payload: "thank you"
   utter_ask_cuisine:
-    - "what kind of cuisine would you like?"
+    - text: "what kind of cuisine would you like?"
+        buttons:
+          - title: "Chinese"
+            payload: "Chinese"
+          - title: "Mexican"
+            payload: "Mexican"
+          - title: "Italian"
+            payload: "Italian"
+          - title: "American"
+            payload: "American"
+          - title: "South Indian"
+              payload: "South Indian"
+          - title: "North Indian"
+              payload: "North Indian"
   utter_ask_howcanhelp:
     - "how can I help you?"
   utter_ask_location:
