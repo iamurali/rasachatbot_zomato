@@ -15,6 +15,7 @@ from actions.suggest import ActionSuggest
 from policy import RestaurantPolicy
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.channels.console import ConsoleInputChannel
+from train_online import TrainOnline
 
 logger = logging.getLogger(__name__)
 
@@ -51,13 +52,15 @@ if __name__ == '__main__':
   utils.configure_colored_logging(loglevel='INFO')
 
   parser = argparse.ArgumentParser(description='Bot started')
-  parser.add_argument('task', choices=['train-nlu', 'train-dialogue', 'run'], help='what the bot should do - e.g. run or train?')
+  parser.add_argument('task', choices=['train-nlu', 'train-dialogue', 'run', 'train-online'], help='what the bot should do - e.g. run or train?')
   task = parser.parse_args().task
 
   if task == 'train-nlu':
     train_nlu()
   elif task == 'train-dialogue':
     train_dialogue()
+  elif task == 'train-online':
+    TrainOnline().run()
   elif task == 'run':
     run()
 
