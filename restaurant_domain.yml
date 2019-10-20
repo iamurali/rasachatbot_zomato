@@ -13,7 +13,8 @@ slots:
 entities:
 - location
 - info
-- price
+- price_start
+- price_end
 - cuisine
 
 intents:
@@ -58,10 +59,12 @@ templates:
   utter_ask_price:
     - text: "in which price range?"
       buttons:
-      - title: "cheap"
-        payload: "cheap"
-      - title: "expensive"
-        payload: "expensive"
+      - title: "Lesser than Rs. 300"
+        payload: "0-300"
+      - title: "Rs. 300 to 700"
+        payload: "300-700"
+      - title: "More than 700"
+        payload: "700-10000"
   utter_on_it:
     - "I'm on it"
 

@@ -8,6 +8,10 @@
       {
         "name": "greet",
         "pattern": "hey[^\\s]*"
+      },
+      {
+        "name": "price",
+        "pattern": "\d{1,3}[,\\.]?(\\d{1,2})?"
       }
     ],
     "entity_synonyms": [
@@ -530,6 +534,48 @@
         "text": "have a good one",
         "intent": "goodbye",
         "entities": []
+      },
+      {
+        "text": "give me restaurants in 300 to 500 range",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 24,
+            "end": 27,
+            "value": "300",
+            "entity": "price_start"
+          },
+          {
+            "start": 31,
+            "end": 34,
+            "value": "500",
+            "entity": "price_end"
+          }
+        ]
+      },
+      {
+        "text": "price range less than 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "0",
+            "entity": "price_end"
+          }
+        ]
+      },
+      {
+        "text": "price more than 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 20,
+            "value": "700",
+            "entity": "price_start"
+          }
+        ]
       },
       {
         "text": "please help me to find restaurants in pune",

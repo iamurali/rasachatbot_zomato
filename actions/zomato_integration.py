@@ -16,13 +16,12 @@ class ZomatoIntegration():
     response = (requests.get(url, headers = self.__fetchheaders()).content).decode("utf-8")
     return json.loads(response)
 
-  def restaurants_search(self, lat="", lon="", cuisines="", limit=10):
+  def restaurants_search(self, lon="", lat="",  cuisines="", limit=10):
     url = base_url + "search?count=" + str(limit) + "&lat=" + str(lat) + '&lon=' + str(lon)
     if ((cuisines is not None) and (cuisines != 'None')):
       url = url + '&cuisines=' + str(cuisines)
 
     response = (requests.get(url, headers = self.__fetchheaders()).content).decode("utf-8")
-    print(response)
     return (json.loads(response)["restaurants"])
 
   def __fetchheaders(self):
