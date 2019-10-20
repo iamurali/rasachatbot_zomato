@@ -3,7 +3,9 @@ slots:
     type: text
   location:
     type: text
-  price:
+  price_start:
+    type: text
+  price_end:
     type: text
   info:
     type: text
