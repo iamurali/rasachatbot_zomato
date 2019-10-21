@@ -25,7 +25,7 @@ class ActionSearchRestaurants():
     restaurants = self.__fetch_restaurants(zomato, longitude, latitude, cuisine_type)
     result = ""
     for restaurant in restaurants:
-      result = result + "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
+      result = result + "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+ " has been rated "+ restaurant['restaurant']['user_rating']['aggregate_rating'] + "\n"
 
     dispatcher.utter_message("-----" + result)
     return [SlotSet('location', location)]

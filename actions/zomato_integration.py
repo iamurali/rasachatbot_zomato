@@ -17,7 +17,7 @@ class ZomatoIntegration():
     return json.loads(response)
 
   def restaurants_search(self, lon="", lat="",  cuisines="", limit=10):
-    url = base_url + "search?count=" + str(limit) + "&lat=" + str(lat) + '&lon=' + str(lon)
+    url = base_url + "search?count=" + str(limit) + "&lat=" + str(lat) + '&lon=' + str(lon) + '&sort=rating'
     if ((cuisines is not None) and (cuisines != 'None')):
       url = url + '&cuisines=' + str(cuisines)
 
