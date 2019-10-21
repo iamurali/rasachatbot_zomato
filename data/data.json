@@ -28,6 +28,20 @@
         ]
       },
       {
+        "value": "Bangalore",
+        "synonyms": [
+          "Bangalore",
+          "Bengaluru"
+        ]
+      },
+      {
+        "value": "Mumbai",
+        "synonyms": [
+          "Mumbai",
+          "Bombay"
+        ]
+      },
+      {
         "value": "vegetarian",
         "synonyms": [
           "veggie",
@@ -504,7 +518,7 @@
             "entity": "budget"
           }
         ]
-      }
+      },
       {
         "text": "Lithuania",
         "intent": "inform",
