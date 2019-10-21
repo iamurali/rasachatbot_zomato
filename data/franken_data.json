@@ -20,6 +20,20 @@
         ]
       },
       {
+        "value": "Bangalore",
+        "synonyms": [
+          "Bangalore",
+          "Bengaluru"
+        ]
+      },
+      {
+        "value": "Mumbai",
+        "synonyms": [
+          "Mumbai",
+          "Bombay"
+        ]
+      },
+      {
         "value": "vegetarian",
         "synonyms": [
           "veggie",
