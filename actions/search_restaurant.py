@@ -2,12 +2,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
 
+from rasa_core.actions.action import Action
 import os
 import pprint, json
 from actions.zomato_integration import ZomatoIntegration
 from rasa_core.events import SlotSet
 
-class ActionSearchRestaurants():
+class ActionSearchRestaurants(Action):
   def name(self):
     return 'action_search_restaurants'
 
@@ -21,8 +22,9 @@ class ActionSearchRestaurants():
       return []
     zomato = ZomatoIntegration(os.environ['ZOMATO_API_KEY'])
     longitude, latitude = self.__fetch_location_details(zomato, location)
-    print(longitude, latitude, 'latitude')
     restaurants = self.__fetch_restaurants(zomato, longitude, latitude, cuisine_type)
+
+    global result
     result = ""
     for restaurant in restaurants:
       result = result + "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+ " has been rated "+ restaurant['restaurant']['user_rating']['aggregate_rating'] + "\n"

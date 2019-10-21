@@ -10,7 +10,7 @@
         "pattern": "hey[^\\s]*"
       },
       {
-        "name": "inform",
+        "name": "restaurant_search",
         "pattern": "\d{1,3}[,\\.]?(\\d{1,2})?"
       },
       {
@@ -147,22 +147,22 @@
       },
       {
         "text": "i'm looking for a place to eat",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": []
       },
       {
         "text": "I want to grab lunch",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": []
       },
       {
         "text": "I am searching for a dinner spot",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": []
       },
       {
         "text": "i'm looking for a place in the north of town",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 31,
@@ -174,7 +174,7 @@
       },
       {
         "text": "show me chinese restaurants",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 8,
@@ -186,7 +186,7 @@
       },
       {
         "text": "show me chines restaurants in the north",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 8,
@@ -204,7 +204,7 @@
       },
       {
         "text": "show me a mexican place in the centre",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 31,
@@ -222,7 +222,7 @@
       },
       {
         "text": "i am looking for an indian spot called olaolaolaolaolaola",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 20,
@@ -234,12 +234,12 @@
       },
       {
         "text": "search for restaurants",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": []
       },
       {
         "text": "anywhere in the west",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 16,
@@ -251,7 +251,7 @@
       },
       {
         "text": "anywhere near 18328",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 14,
@@ -263,7 +263,7 @@
       },
       {
         "text": "I am looking for asian fusion food",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 17,
@@ -275,7 +275,7 @@
       },
       {
         "text": "I am looking a restaurant in 29432",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 29,
@@ -287,7 +287,7 @@
       },
       {
         "text": "in London",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 3,
@@ -299,7 +299,7 @@
       },
       {
         "text": "South Indian",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -311,7 +311,7 @@
       },
       {
         "text": "North Indian",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -323,7 +323,7 @@
       },
       {
         "text": "Italian",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -335,7 +335,7 @@
       },
       {
         "text": "i am looking for an italian restaurent in delhi please send the results to my email id dfresf@ffmall.cdom",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 20,
@@ -359,7 +359,7 @@
       },
       {
         "text": "find Mexican food outlets in pune ",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 29,
@@ -377,7 +377,7 @@
       },
       {
         "text": "Chinese",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -389,7 +389,7 @@
       },
       {
         "text": "chinese",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -401,7 +401,7 @@
       },
       {
         "text": "find American food outlets in kolkata ",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 5,
@@ -419,7 +419,7 @@
       },
       {
         "text": "i would like to have Thai food",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 21,
@@ -431,7 +431,7 @@
       },
       {
         "text": "i wants american dish",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 8,
@@ -443,7 +443,7 @@
       },
       {
         "text": "serve me north indian",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 9,
@@ -455,7 +455,7 @@
       },
       {
         "text": "send results to my email id ertsdfgdf@asded.csd.in of mexican restaurents in Agra",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 28,
@@ -479,7 +479,7 @@
       },
       {
         "text": "send some American restaurents to oiuopiokj@sdfsd.asda.sd",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 34,
@@ -497,7 +497,7 @@
       },
       {
         "text": "find pocket friendly thai restaurant in chennai",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 21,
@@ -521,7 +521,7 @@
       },
       {
         "text": "Lithuania",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -533,7 +533,7 @@
       },
       {
         "text": "Oh, sorry, in Italy",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 14,
@@ -545,7 +545,7 @@
       },
       {
         "text": "in delhi",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 3,
@@ -557,7 +557,7 @@
       },
       {
         "text": "In Delhi",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 3,
@@ -569,7 +569,7 @@
       },
       {
         "text": "In Delhi.",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 3,
@@ -581,7 +581,7 @@
       },
       {
         "text": "I am looking for some restaurants in Delhi.",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 37,
@@ -593,7 +593,7 @@
       },
       {
         "text": "I am looking for some restaurants in Delhi",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 37,
@@ -605,7 +605,7 @@
       },
       {
         "text": "I am looking for some restaurants in delhi",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 37,
@@ -617,7 +617,7 @@
       },
       {
         "text": "I am looking for mexican indian fusion",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 17,
@@ -629,7 +629,7 @@
       },
       {
         "text": "can you book a table in rome in a moderate price range with british food for four people",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 24,
@@ -659,7 +659,7 @@
       },
       {
         "text": "central indian restaurant",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -717,7 +717,7 @@
       },
       {
         "text": "pocket friendly",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -729,7 +729,7 @@
       },
       {
         "text": "pocket-friendly",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -741,7 +741,7 @@
       },
       {
         "text": "find pocket friendly thai restaurant in chennai",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 21,
@@ -765,7 +765,7 @@
       },
       {
         "text": "costly",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -777,7 +777,7 @@
       },
       {
         "text": "moderate",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -789,7 +789,7 @@
       },
       {
         "text": "find a Pocket Friendly restaurant ",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 7,
@@ -801,7 +801,7 @@
       },
       {
         "text": "Pocket-Friendly restaurant",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -861,7 +861,7 @@
       },
       {
         "text": "please help me to find restaurants in pune",
-        "intent": "inform",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 38,

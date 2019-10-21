@@ -5,33 +5,29 @@ slots:
     type: text
   budget:
     type: text
-  info:
-    type: text
-  matches:
-    type: unfeaturized
   email:
     type: text
 
 entities:
 - location
-- info
 - budget
 - cuisine
+- email
 
 intents:
  - greet
  - affirm
  - deny
  - send_email
- - inform
  - thankyou
- - request_info
  - restaurant_search
  - goodbye
 
 templates:
   utter_greet:
-    - "hey there!"
+    - "hey there! How may i help you"
+    - "Hi, How can I help you!"
+    - "Hey, How is it going. How May I help you Today"
   utter_goodbye:
     - "goodbye :("
     - "Bye-bye"
@@ -71,12 +67,12 @@ templates:
   utter_ask_price:
     - text: "in which price range?"
       buttons:
-      - title: "Lesser than Rs. 300"
-        payload: "0-300"
-      - title: "Rs. 300 to 700"
-        payload: "300-700"
-      - title: "More than 700"
-        payload: "700-10000"
+       - title: "Lesser than Rs. 300"
+         payload: "300"
+       - title: "Rs. 300 to 700"
+         payload: "700"
+       - title: "More than 700"
+         payload: "1000"
   utter_on_it:
     - "I'm on it"
 

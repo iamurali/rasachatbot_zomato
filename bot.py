@@ -13,6 +13,8 @@ from rasa_core.policies.memoization import MemoizationPolicy
 from actions.search_restaurant import ActionSearchRestaurants
 from actions.send_email import ActionSendEmail, ActionRestartBot
 from policy import RestaurantPolicy
+from rasa_core.policies.keras_policy import KerasPolicy
+from rasa_core.featurizers import (MaxHistoryTrackerFeaturizer, BinarySingleStateFeaturizer)
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.channels.console import ConsoleInputChannel
 from train_online import TrainOnline
@@ -33,7 +35,8 @@ def train_nlu():
 def train_dialogue(domain_file='restaurant_domain.yml',
                     model_path="models/dialogue",
                     training_data_file='data/babi_stories.md'):
-  agent = Agent(domain_file, policies=[MemoizationPolicy(max_history=3), RestaurantPolicy()])
+  featurizer = MaxHistoryTrackerFeaturizer(BinarySingleStateFeaturizer(), max_history=5)
+  agent = Agent(domain_file, policies=[MemoizationPolicy(max_history=5), KerasPolicy(featurizer)])
   training_data = agent.load_data(training_data_file)
   agent.train(training_data, epochs=400, batch_size=100, validation_split=0.2)
   agent.persist(model_path)
